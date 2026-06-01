@@ -6,4 +6,7 @@ First, open terminal and navigate to the mount point:
 
 ```bash
 cd /mnt/nvme
-ource ultralytics_env/bin/activate
+source ultralytics_env/bin/activate
+
+mkdir -p /mnt/nvme/tmp
+export TMPDIR=/mnt/nvme/tmp
