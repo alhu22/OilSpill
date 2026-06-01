@@ -5,4 +5,5 @@
 First, open terminal and navigate to the mount point:
 
 ```bash
-cd /mnt/nv3
+cd /mnt/nvme
+ource ultralytics_env/bin/activate
