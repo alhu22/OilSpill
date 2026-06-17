@@ -5,8 +5,4 @@
 First, open terminal and navigate to the mount point:
 
 ```bash
-cd /mnt/nvme
-source ultralytics_env/bin/activate
-
-mkdir -p /mnt/nvme/tmp
-export TMPDIR=/mnt/nvme/tmp
+pip install torch torchvision torchaudio --index-url https://pypi.jetson-ai-lab.io/jp6/cu126
