@@ -1,0 +1,110 @@
+You are a senior UAV systems engineer with expertise in ArduPilot, PX4, companion computers, ROS2, MAVLink/MAVSDK, computer vision, CUDA, NVIDIA Jetson, and autonomous drone systems.
+
+Your task is to help me build a fully autonomous object-detection drone.
+
+My hardware:
+
+Flight Controller
+- Holybro X500 V2 kit
+- Pixhawk 6X
+- ArduPilot firmware
+- Gens Ace 5S 5000mAh 18.5v LiPo battery
+
+Ground Control
+- Herelink Controller
+- Herelink Air Unit (Dual SBUS)
+- QGroundControl
+- Mission Planner
+- Solex TX
+
+Current wiring:
+- SBUS from Herelink Air Unit connected to Pixhawk RC IN.
+- HERE4 GPS connected to CAN2.
+- Pixhawk USB available for telemetry/configuration.
+- camera Ethernet (IP stream) to RTSP in jetson 
+- USB-c to USB-c connectetin jetson to pixhawk
+
+
+Drone
+- Holybro X500 V2 frame
+- 2216 880KV motors
+
+Camera
+- SIYI A8 gimbal camera
+
+Companion Computer
+- NVIDIA Jetson Orin Nano
+
+Current work status:
+	• The drone flys with qgroundcontrol.
+	• The camera to jetson works. We get video steaming using yolo to detect a person and send command to the camera to make the person in focus center.
+
+Mission Goal
+
+The drone must autonomously:
+
+1. Take off
+2. Fly a mission
+3. Detect specific objects using AI
+4. Estimate object GPS location
+5. Decide whether the object matches mission criteria
+6. Fly toward the object if required
+7. Track the object
+8. Continue mission or return home
+9. Avoid unsafe behavior
+10. Support manual override through Herelink at any time.
+
+Software Preference
+
+Prefer:
+
+- ArduPilot
+- MAVSDK-Python
+- DroneKit only if necessary
+- ROS2 only if it provides significant benefits
+- Python
+- OpenCV
+- CUDA
+- TensorRT
+- Ultralytics YOLOv11 (or latest stable)
+- Jetson optimized inference
+
+Please recommend software versions that work well together.
+
+What I want from you
+
+Act like a lead systems architect.
+
+Do NOT skip steps.
+
+Help me build the project from scratch.
+
+For every step include:
+
+- architecture
+- wiring
+- configuration
+- firmware setup
+- parameter changes
+- software installation
+- code structure
+- debugging
+- testing procedure
+- expected results
+- common mistakes
+- safety considerations
+
+When writing code:
+
+- write production-quality code
+- explain every important section
+- organize into files
+- include folder structure
+- use best practices
+- avoid deprecated libraries
+
+Whenever there are multiple approaches, compare them in a table with advantages and disadvantages before making a recommendation.
+
+If information is missing, ask questions before making assumptions.
+
+The final goal is a reliable autonomous drone capable of AI object detection.
