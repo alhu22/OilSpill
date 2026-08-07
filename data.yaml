@@ -1,0 +1,12 @@
+path: C:/Users/alhu22/oljautsläpp/LADOS-2-yolo
+train: images/train
+val: images/valid
+test: images/test
+
+names:
+  0: oils-emulsions
+  1: emulsion
+  2: oil
+  3: oil-platform
+  4: sheen
+  5: ship
